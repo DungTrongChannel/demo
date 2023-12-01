@@ -10,48 +10,60 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./script.js"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
     <!-- HEADER -->
-    <div class="bg-white px-5 py-4 relative h-[68px] lg:h-[94px] lg:px-[72px]">
+    <div class="bg-white px-5 py-4 relative h-[68px] lg:h-[94px] lg:px-[72px]" id="header">
         <div class="container lg:h-full">
             <div class="lg:flex lg:items-center lg:justify-between lg:h-full">
                 <ul class="hidden lg:flex nav">
-                    <a href="tel:+84190099999">
+                    <!-- <a href="tel:+84966976698">
                         <p class="hotline text-left mt-0 flex gap-3"><img src="./assets/images/call.svg" />HOTLINE:
-                            <b>0966976698</b></p>
-                    </a>
-                    <a href="#location">
+                            <b>0966 976 698</b>
+                        </p>
+                    </a> -->
+                    <a href="#location" class="a-scroll">
                         <li>Vị trí</li>
                     </a>
-                    <a href="#extension">
+                    <a href="#extension" class="a-scroll">
                         <li>Tiện ích</li>
+                    </a>
+
+                    <a href="#advantage" class="a-scroll">
+                        <li>Lợi thế</li>
+                    </a>
+                    <a href="#products" class="a-scroll">
+                        <li>Sản phẩm</li>
                     </a>
                 </ul>
                 <ul class="hidden lg:flex nav">
-                    <a href="#advantage">
-                        <li>Lợi thế</li>
-                    </a>
-                    <a href="#products">
-                        <li>Sản phẩm</li>
-                    </a>
-                    <a href="#policy">
+
+                    <a href="#policy" class="a-scroll">
                         <li>Chính sách bán hàng</li>
+                    </a>
+
+                    <a href="#register" class="a-scroll">
+                        <li>Giải đáp thắc mắc của Khách Hàng</li>
                     </a>
                 </ul>
             </div>
             <div class="lg:hidden absolute right-5 top-1/2 -translate-y-1/2 z-40" id="menu">
                 <img src="./assets/images/hamburger.svg" alt="hamburger" />
             </div>
-            <div class="absolute z-10 -bottom-[65px] lg:-bottom-[88px] left-[50%] -translate-x-1/2">
+            <div class="absolute z-10 -bottom-[65px] lg:-bottom-[87px] left-[50%] -translate-x-1/2 header__logo">
                 <div
                     class="relative w-[104px] h-[104px] lg:w-[144px] lg:h-[144px] mx-auto z-30 absolute top-[50px] lg:top-[70px]">
-                    <img src="./assets/images/logo.svg" alt="logo" class="object-fit" />
+                    <img src="./assets/images/logo.png" alt="logo" class="object-fit" />
                 </div>
                 <svg class="lg:hidden" width="204" height="66" viewBox="0 0 204 66" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -69,31 +81,38 @@
             </div>
             <sidebar class="sidebar nav" id="sidebar">
                 <ul>
-                    <a href="#location">
+                    <a href="#location" class="a-scroll">
                         <li>Vị trí</li>
                     </a>
-                    <a href="#extension">
+                    <a href="#extension" class="a-scroll">
                         <li>Tiện ích</li>
                     </a>
-                    <a href="#advantage">
+                    <a href="#advantage" class="a-scroll">
                         <li>Lợi thế</li>
                     </a>
-                    <a href="#products">
+                    <a href="#products" class="a-scroll">
                         <li>Sản phẩm</li>
                     </a>
-                    <a href="#policy">
+                    <a href="#policy" class="a-scroll">
                         <li>Chính sách bán hàng</li>
+                    </a>
+
+                    <a href="#register" class="a-scroll">
+                        <li>Giải đáp thắc mắc của Khách Hàng</li>
                     </a>
                 </ul>
                 <div class="mt-auto">
-                    <p class="hotline text-left">HOTLINE: <b>0966976698</b></p>
-                    <button class="btn-register--orange mt-6"><svg width="19" height="20" viewBox="0 0 19 20"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a href="tel:+84966976698" class="!pb-0">
+                        <p class="hotline text-left">HOTLINE: <b>0966 976 698</b></p>
+                    </a>
+                    <br>
+                    <a href="#register" class="btn-register--orange  items-center flex justify-center">
+                        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M0.405282 6.11725C0.302664 6.15137 0.212089 6.21442 0.144448 6.2988C0.0768062 6.38318 0.0349781 6.4853 0.0239932 6.59288C0.0130083 6.70047 0.0333341 6.80894 0.0825266 6.90524C0.131719 7.00155 0.207684 7.0816 0.301287 7.13576L5.95037 10.4065C6.04357 10.4604 6.15029 10.4863 6.25783 10.4812C6.36536 10.4762 6.46917 10.4403 6.55688 10.3779L12.9054 5.84257C13.1642 5.6584 13.4817 5.97594 13.2975 6.23474L8.76301 12.5824C8.70031 12.6701 8.66419 12.7741 8.65898 12.8817C8.65377 12.9894 8.67969 13.0964 8.73364 13.1897L12.0043 18.8388C12.0585 18.9324 12.1385 19.0084 12.2348 19.0576C12.3312 19.1068 12.4396 19.1271 12.5472 19.1161C12.6548 19.1051 12.7569 19.0633 12.8413 18.9956C12.9257 18.928 12.9887 18.8374 13.0228 18.7348L18.9768 0.873027C19.0096 0.774183 19.0143 0.668153 18.9903 0.566793C18.9664 0.465434 18.9146 0.372746 18.841 0.299095C18.7673 0.225446 18.6747 0.173738 18.5733 0.149759C18.4719 0.125782 18.3659 0.130476 18.2671 0.163319L0.405282 6.11725Z"
                                 fill="white" />
                         </svg><span>ĐĂNG KÝ TƯ
-                            VẤN</span></button>
+                            VẤN</span></a>
                 </div>
             </sidebar>
             <div class="sidebar__fade" id="backdrop"></div>
@@ -101,14 +120,65 @@
     </div>
     <!-- END HEADER -->
 
+    <!-- social -->
+    <div class="fixed bottom-[60px] right-[20px] z-30">
+        
+        <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "103192052226659");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v18.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+        <a href="tel:+84966976698"
+            class="mb-5 phone-social w-[44px] h-[44px] rounded-full flex items-center justify-center"><img
+                src="./assets/images/phone.svg" alt=""></a>
+        <a href="https://zalo.me/0966976698" target="_blank"
+            class="scale1 mb-5 bg-[#0068FE] w-[44px] h-[44px] rounded-full flex items-center justify-center"><img
+                src="./assets/images/zalo.svg" alt=""></a>
+        <a href="https://www.facebook.com/Oceanlink66?locale=vi_VN" target="_blank"
+            class="scale1 mb-5 bg-[#1877F2] w-[44px] h-[44px] rounded-full flex items-center justify-center"><img
+                src="./assets/images/fb.svg" alt=""></a>
+    </div>
+    <div class="fixed bottom-[20px] -right-[100%] z-30" id="scrollTopWrap">
+        <button class="gradient w-[34px] h-[34px] rounded-full flex items-center justify-center" id="scrollTop"><img
+                src="./assets/images/sroll-top.svg" alt=""></button>
+    </div>
+    <!-- end social -->
+
 
     <!-- HERO SECTION -->
     <div class="gradient pt-[95px] relative lg:flex lg:justify-between]">
         <div class="relative px-5 z-20 lg:max-w-[1440px] lg:mx-auto">
             <div class="container">
                 <!-- <div class="lg:inline-flex lg:flex-col"> -->
-                <div class="gradient-gold inline-block  table text-white rounded-lg px-4 py-[10px] font-bold">
-                    KHU ĐÔ THỊ THEZENPARK
+                <div class="gradient-gold inline-block  table text-white rounded-lg px-4 py-[10px] font-bold">KHU ĐÔ THỊ
+                    THE
+                    ZENPARK
                 </div>
                 <div class="text-white pl-[15px] py-5 inline-flex flex-col gap-[9px]">
                     <p class="title-hero__sub">BỪNG SẮC</p>
@@ -119,46 +189,41 @@
                     </div>
                     <p class="title-hero__sub title-hero__sub--right">ĐÔ HỘI</p>
                 </div>
-                <button id="scrollButton" class="btn-register zooming-div"><img src="./assets/images/send.svg"
-                        alt="icon send" />
-                    <span>
-                        ĐĂNG KÝ TƯ VẤN
-                    </span>
-                </button>
+                <br>
+                <a href="tel:+84966976698" class="btn-register scale">
+                    <!-- <img src="./assets/images/send.svg" alt="icon send" /><span>GỬI ĐI</span> -->
+                    <p class="hotline text-left mt-0 flex gap-3"><img src="./assets/images/call.svg" />HOTLINE:
+                        <b>0966 976 698</b>
+                    </p>
+                </a>
                 <!-- </div> -->
             </div>
         </div>
-        <div class="relative" id="image-icon">
-            <div id="image-icon-content">
-                <img src="./assets/images/hero-banner.png" alt="banner" class="w-[81%] lg:max-w-[704px] ml-auto">
-                <ul id="icons">
-                    <li class="zooming-div"><img src="./assets/images/icon-phone.png" alt=""></li>
-                    <li class="anym"><a href="https://zalo.me/0966976698"><img src="./assets/images/icon-zalo.png" alt=""></a></li>
-                    <li class="anym"><a href="https://www.facebook.com/Oceanlink66?locale=vi_VN"><img src="./assets/images/icon-facebook.png" alt=""></a></li>
-                    <li><img src="./assets/images/icon-arrow-up.png" alt=""></li>
-                </ul>
-            </div>
+        <div class="relative">
+            <img src="./assets/images/hero-banner.png" alt="banner" class="w-[81%] lg:max-w-[704px] ml-auto">
         </div>
-
         <img src="./assets/images/hero-abstract.svg" alt="abstract" class="absolute top-0 left-0 z-10">
     </div>
     <!-- END HERO SECTION -->
 
     <!-- ABOUT US -->
-    <section>
-        <div class="container px-5 lg:px-0">
+    <section class="wrapper-block">
+        <div class="container px-5 lg:px-0 div-parent">
             <div class="lg:flex lg:items-center lg:gap-6">
                 <div class="lg:flex-1">
-                    <h2 class="title">về chúng tôi</h2>
-                    <h3 class="title__sub">Chuyên gia bất động sản cao cấp</h3>
+                    <h2 class="title" data-aos="fade-right" data-aos-offset="200">về chúng tôi</h2>
+                    <h3 class="title__sub" data-aos="fade-right" data-aos-offset="200">Chuyên gia bất động sản cao cấp
+                    </h3>
                     <p class="hidden lg:block mb-6 font-normal">Lorem ipsum dolor sit amet consectetur. Diam sagittis
                         enim proin cursus tellus. Suspendisse et at dolor id laoreet. Cras ac etiam malesuada ipsum.
                         Viverra sit maecenas quam vulputate interdum.</p>
-                    <p class="more">anh chị xem video để hiểu hơn về chúng tôi</p>
+                    <p class="more" data-aos="fade-right" data-aos-offset="200" data-aos-delay="500">anh chị xem video
+                        để hiểu hơn về chúng tôi</p>
                 </div>
 
                 <div class="relative lg:w-[57%]">
-                    <div id="aboutVideo">
+                    <div id="aboutVideo" class="video-wrap" data-aos="fade-left" data-aos-offset="200"
+                        data-aos-delay="200">
                         <div class="lg:hidden"><img src="./assets/images/about.png" alt="about"></div>
                         <div class="hidden lg:block"><img src="./assets/images/about-pc.png" alt="about"></div>
                         <button class="btn-play z-10" id="videoAbout"
@@ -167,8 +232,16 @@
                         </button>
                         <div id="video-container-aboutVideo" class="video-frame"></div>
                     </div>
-
+                    <p class="more more-mobile" data-aos="fade-right" data-aos-offset="200" data-aos-delay="500">( Anh
+                        chị xem video
+                        để hiểu hơn về chúng tôi )</p>
                 </div>
+            </div>
+            <div class="flex justify-center div-cicle">
+                <a href="#location" class="btn-scroll a-scroll" data-aos="zoom-in" data-aos-offset="10"
+                    data-aos-delay="100">
+                    <img src="./assets/images/ic-down-double.svg" alt="">
+                </a>
             </div>
         </div>
         </div>
@@ -176,19 +249,22 @@
     <!-- END ABOUT US -->
 
     <!-- LOCATION -->
-    <section class="bg-white relative" id="location">
-        <div class="container px-5 lg:px-0">
+    <section class="bg-white relative wrapper-block" id="location">
+        <div class="container px-5 lg:px-0 div-parent">
             <div class="lg:flex lg:items-center lg:gap-6 lg:flex-row-reverse">
                 <div class="lg:flex-1">
-                    <h2 class="title">vị trí</h2>
-                    <h3 class="title__sub">Tọa độ vàng giữa lòng Thành phố biển hồ</h3>
+                    <h2 class="title" data-aos="fade-left" data-aos-offset="200">vị trí</h2>
+                    <h3 class="title__sub" data-aos="fade-left" data-aos-offset="200">Tọa độ vàng giữa lòng Thành phố
+                        biển hồ</h3>
                     <p class="hidden lg:block mb-6 font-normal">Lorem ipsum dolor sit amet consectetur. Diam sagittis
                         enim proin cursus tellus. Suspendisse et at dolor id laoreet. Cras ac etiam malesuada ipsum.
                         Viverra sit maecenas quam vulputate interdum.</p>
-                    <p class="more--left">anh chị xem video để hiểu hơn về VỊ TRÍ THE ZENPARK</p>
+                    <p class="more--left" data-aos="fade-left" data-aos-offset="200" data-aos-delay="500">anh chị xem
+                        video để hiểu hơn về VỊ TRÍ THE ZENPARK</p>
                 </div>
                 <div class="relative lg:w-[57%]">
-                    <div id="locationVideo">
+                    <div id="locationVideo" class="video-wrap" data-aos="fade-right" data-aos-offset="200"
+                        data-aos-delay="200">
                         <div class="lg:hidden"><img src="./assets/images/location.png" alt="location"></div>
                         <div class="hidden lg:block"><img src="./assets/images/location-pc.png" alt="location"></div>
                         <button class="btn-play z-10" id="videoAbout"
@@ -197,8 +273,16 @@
                         </button>
                         <div id="video-container-locationVideo" class="video-frame"></div>
                     </div>
-
+                    <p class="more more-mobile" data-aos="fade-right" data-aos-offset="200" data-aos-delay="500">( Anh
+                        chị xem
+                        video để hiểu hơn về vị trí THE ZENPARK )</p>
                 </div>
+            </div>
+            <div class="flex justify-center div-cicle">
+                <a href="#extension" class="btn-scroll a-scroll" data-aos="zoom-in" data-aos-offset="10"
+                    data-aos-delay="100">
+                    <img src="./assets/images/ic-down-double.svg" alt="">
+                </a>
             </div>
         </div>
         <img class="absolute max-w-[275px] lg:max-w-[515px] -right-[53px] lg:-right-[111px] top-[14px] "
@@ -207,19 +291,22 @@
     <!-- END LOCATION -->
 
     <!-- EXTENSIONS -->
-    <section class="gradient-gold-white relative" id="extension">
-        <div class="container px-5 lg:px-0">
+    <section class="gradient-gold-white relative wrapper-block" id="extension">
+        <div class="container px-5 lg:px-0 div-parent">
             <div class="lg:flex lg:items-center lg:gap-6">
                 <div class="lg:flex-1">
-                    <h2 class="title">tiện ích</h2>
-                    <h3 class="title__sub">Chuỗi tiện ích đỉnh cao tại khu đô thị bậc nhất</h3>
+                    <h2 class="title" data-aos="fade-right" data-aos-offset="200">tiện ích</h2>
+                    <h3 class="title__sub" data-aos="fade-right" data-aos-offset="200">Chuỗi tiện ích đỉnh cao tại khu
+                        đô thị bậc nhất</h3>
                     <p class="hidden lg:block mb-6 font-normal">Lorem ipsum dolor sit amet consectetur. Diam sagittis
                         enim proin cursus tellus. Suspendisse et at dolor id laoreet. Cras ac etiam malesuada ipsum.
                         Viverra sit maecenas quam vulputate interdum.</p>
-                    <p class="more">anh chị xem video để hiểu hơn về TIỆN ÍCH THE ZENPARK </p>
+                    <p class="more" data-aos="fade-right" data-aos-offset="200" data-aos-delay="500">anh chị xem video
+                        để hiểu hơn về TIỆN ÍCH THE ZENPARK </p>
                 </div>
                 <div class="relative lg:w-[57%] z-20">
-                    <div id="extensionVideo">
+                    <div id="extensionVideo" class="video-wrap" data-aos="fade-left" data-aos-offset="200"
+                        data-aos-delay="200">
                         <div class="lg:hidden"><img src="./assets/images/extension.png" alt="extension"></div>
                         <div class="hidden lg:block"><img src="./assets/images/extension-pc.png" alt="extension"></div>
                         <button class="btn-play  z-10" id="extensionVideo"
@@ -228,7 +315,16 @@
                         </button>
                         <div id="video-container-extensionVideo" class="video-frame"></div>
                     </div>
+                    <p class="more more-mobile" data-aos="fade-right" data-aos-offset="200" data-aos-delay="500">( Anh
+                        chị xem video
+                        để hiểu hơn về tiện ích THE ZENPARK ) </p>
                 </div>
+            </div>
+            <div class="flex justify-center div-cicle">
+                <a href="#advantage" class="btn-scroll a-scroll" data-aos="zoom-in" data-aos-offset="10"
+                    data-aos-delay="100">
+                    <img src="./assets/images/ic-down-double.svg" alt="">
+                </a>
             </div>
         </div>
         <img src="./assets/images/abstract-extension.svg" alt="abstract"
@@ -237,19 +333,22 @@
     <!-- END EXTENSIONS -->
 
     <!-- ADVANTAGE -->
-    <section class="bg-white relative" id="advantage">
-        <div class="container px-5 lg:px-0">
+    <section class="bg-white relative wrapper-block" id="advantage">
+        <div class="container px-5 lg:px-0 div-parent">
             <div class="lg:flex lg:items-center lg:gap-6 lg:flex-row-reverse">
                 <div class="lg:flex-1">
-                    <h2 class="title">lợi thế</h2>
-                    <h3 class="title__sub whitespace-nowrap">Phân khu hiện đại nhất Vinhomes Ocean park</h3>
+                    <h2 class="title" data-aos="fade-left" data-aos-offset="200">lợi thế</h2>
+                    <h3 class="title__sub whitespace-nowrap" data-aos="fade-left" data-aos-offset="200">Phân khu hiện
+                        đại nhất Vinhomes Ocean park</h3>
                     <p class="hidden lg:block mb-6 font-normal">Lorem ipsum dolor sit amet consectetur. Diam sagittis
                         enim proin cursus tellus. Suspendisse et at dolor id laoreet. Cras ac etiam malesuada ipsum.
                         Viverra sit maecenas quam vulputate interdum.</p>
-                    <p class="more--left">anh chị xem video để hiểu hơn về LỢI THẾ THE ZENPARK</p>
+                    <p class="more--left" data-aos="fade-left" data-aos-offset="200" data-aos-delay="500">anh chị xem
+                        video để hiểu hơn về LỢI THẾ THE ZENPARK</p>
                 </div>
                 <div class="relative lg:w-[57%]">
-                    <div id="advantageVideo">
+                    <div id="advantageVideo" class="video-wrap" data-aos="fade-right" data-aos-offset="200"
+                        data-aos-delay="200">
                         <div class="lg:hidden"><img src="./assets/images/advantage.png" alt="advantage"></div>
                         <div class="hidden lg:block"><img src="./assets/images/advantage-pc.png" alt="advantage"></div>
                         <button class="btn-play z-10" id="advantageVideo"
@@ -258,7 +357,16 @@
                         </button>
                         <div id="video-container-advantageVideo" class="video-frame"></div>
                     </div>
+                    <p class="more more-mobile" data-aos="fade-right" data-aos-offset="200" data-aos-delay="500">( Anh
+                        chị xem
+                        video để hiểu hơn về lợi thế THE ZENPARK )</p>
                 </div>
+            </div>
+            <div class="flex justify-center div-cicle">
+                <a href="#products" class="btn-scroll a-scroll" data-aos="zoom-in" data-aos-offset="10"
+                    data-aos-delay="100">
+                    <img src="./assets/images/ic-down-double.svg" alt="">
+                </a>
             </div>
         </div>
         <img src="./assets/images/abstract-advantage.svg" alt="abstract"
@@ -267,10 +375,11 @@
     <!-- END ADVANTAGE -->
 
     <!-- PRODUCTS -->
-    <section>
-        <div class="container px-5" id="products">
-            <h2 class="title text-center">sản phẩm</h2>
-            <h3 class="title__sub text-center">Thiết kế căn hộ The Zenpark</h3>
+    <section id="products">
+        <div class="container px-5">
+            <h2 class="title text-center" data-aos="fade-down" data-aos-offset="200">sản phẩm</h2>
+            <h3 class="title__sub text-center" data-aos="fade-down" data-aos-offset="200">Thiết kế căn hộ The Zenpark
+            </h3>
         </div>
         <div class="swiper-custom">
             <!-- Slider main container -->
@@ -280,10 +389,10 @@
                     <!-- Slides -->
                     <div class="swiper-slide">
                         <div class="relative">
-                            <div id="product1Video">
-                                <div class="lg:hidden"><img src="./assets/images/product.png" alt="product"
+                            <div id="product1Video" data-aos="zoom-in" data-aos-offset="200">
+                                <div class="lg:hidden"><img src="./assets/images/studio.png" alt="product"
                                         class="img-product"></div>
-                                <div class="hidden lg:block"><img src="./assets/images/product-pc.png" alt="product"
+                                <div class="hidden lg:block"><img src="./assets/images/studio-pc.png" alt="product"
                                         class="img-product"></div>
                                 <button class="btn-play z-10" id="product1Video"
                                     onclick="loadVideo('WfdcLWjNwD8?si=xgS7wJY8aLlH2GeI', 'product1Video')">
@@ -296,10 +405,10 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="relative">
-                            <div id="product2Video">
-                                <div class="lg:hidden"><img src="./assets/images/product.png" alt="product"
+                            <div id="product2Video" data-aos="zoom-in" data-aos-offset="200">
+                                <div class="lg:hidden"><img src="./assets/images/1PN.png" alt="product"
                                         class="img-product"></div>
-                                <div class="hidden lg:block"><img src="./assets/images/product-pc.png" alt="product"
+                                <div class="hidden lg:block"><img src="./assets/images/1PN-pc.png" alt="product"
                                         class="img-product"></div>
                                 <button class="btn-play z-10" id="product2Video"
                                     onclick="loadVideo('WfdcLWjNwD8?si=xgS7wJY8aLlH2GeI', 'product2Video')">
@@ -311,10 +420,10 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="relative">
-                            <div id="product3Video">
-                                <div class="lg:hidden"><img src="./assets/images/product.png" alt="product"
+                            <div id="product3Video" data-aos="zoom-in" data-aos-offset="200">
+                                <div class="lg:hidden"><img src="./assets/images/1PN+1.png" alt="product"
                                         class="img-product"></div>
-                                <div class="hidden lg:block"><img src="./assets/images/product-pc.png" alt="product"
+                                <div class="hidden lg:block"><img src="./assets/images/1PN+1-pc.png" alt="product"
                                         class="img-product"></div>
                                 <button class="btn-play z-10" id="product3Video"
                                     onclick="loadVideo('WfdcLWjNwD8?si=xgS7wJY8aLlH2GeI', 'product3Video')">
@@ -326,10 +435,10 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="relative">
-                            <div id="product4Video">
-                                <div class="lg:hidden"><img src="./assets/images/product.png" alt="product"
+                            <div id="product4Video" data-aos="zoom-in" data-aos-offset="200">
+                                <div class="lg:hidden"><img src="./assets/images/2PN.png" alt="product"
                                         class="img-product"></div>
-                                <div class="hidden lg:block"><img src="./assets/images/product-pc.png" alt="product"
+                                <div class="hidden lg:block"><img src="./assets/images/2PN-pc.png" alt="product"
                                         class="img-product"></div>
                                 <button class="btn-play z-10" id="product4Video"
                                     onclick="loadVideo('WfdcLWjNwD8?si=xgS7wJY8aLlH2GeI', 'product4Video')">
@@ -341,10 +450,10 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="relative">
-                            <div id="product5Video">
-                                <div class="lg:hidden"><img src="./assets/images/product.png" alt="product"
+                            <div id="product5Video" data-aos="zoom-in" data-aos-offset="200">
+                                <div class="lg:hidden"><img src="./assets/images/2PN+1.png" alt="product"
                                         class="img-product"></div>
-                                <div class="hidden lg:block"><img src="./assets/images/product-pc.png" alt="product"
+                                <div class="hidden lg:block"><img src="./assets/images/2PN+1-pc.png" alt="product"
                                         class="img-product"></div>
                                 <button class="btn-play z-10" id="product5Video"
                                     onclick="loadVideo('WfdcLWjNwD8?si=xgS7wJY8aLlH2GeI', 'product5Video')">
@@ -356,10 +465,10 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="relative">
-                            <div id="product6Video">
-                                <div class="lg:hidden"><img src="./assets/images/product.png" alt="product"
+                            <div id="product6Video" data-aos="zoom-in" data-aos-offset="200">
+                                <div class="lg:hidden"><img src="./assets/images/3PN.png" alt="product"
                                         class="img-product"></div>
-                                <div class="hidden lg:block"><img src="./assets/images/product-pc.png" alt="product"
+                                <div class="hidden lg:block"><img src="./assets/images/3PN-pc.png" alt="product"
                                         class="img-product"></div>
                                 <button class="btn-play z-10" id="product6Video"
                                     onclick="loadVideo('WfdcLWjNwD8?si=xgS7wJY8aLlH2GeI', 'product6Video')">
@@ -388,48 +497,36 @@
 
 
     <!-- POLICY -->
-    <section class="bg-white relative overflow-hidden" id="policy">
-        <div class="container px-5">
+    <section class="bg-white relative overflow-hidden wrapper-block" id="policy">
+        <div class="container px-5 div-parent">
             <div class="lg:flex-1 lg:max-w-[632px] lg:text-center lg:mx-auto">
-                <h2 class="title text-center">chính sách bán hàng</h2>
-                <h3 class="title__sub text-center max-w-[291px] leading-[33px] mx-auto pt-3">Hãy để chúng tôi giúp bạn
+                <h2 class="title text-center" data-aos="fade-down" data-aos-offset="200">chính sách bán hàng</h2>
+                <h3 class="title__sub text-center max-w-[291px] leading-[33px] mx-auto pt-3" data-aos="fade-down"
+                    data-aos-offset="200">Hãy để chúng tôi giúp bạn
                     tìm
                     thấy ngôi nhà mơ ước</h3>
                 <p class="hidden lg:block mb-6 font-normal">Lorem ipsum dolor sit amet consectetur. Diam sagittis enim
                     proin cursus tellus. Suspendisse et at dolor id laoreet. Cras ac etiam malesuada ipsum.</p>
-                <p class="more--down mb-6">anh chị xem video để hiểu hơn về CHÍNH SÁCH BÁN HÀNG CỦA CHÚNG TÔI</p>
+                <p class="more--down mb-6" data-aos="fade-down" data-aos-offset="200" data-aos-delay="500">anh chị xem
+                    video để hiểu hơn về CHÍNH SÁCH BÁN HÀNG CỦA CHÚNG TÔI</p>
             </div>
-            <div class="relative z-10">
-                <div id="policyVideo" class="lg:max-w-[854px] lg:mx-auto">
-                    <!-- <div class="lg:hidden"><img src="./assets/images/policy.png" alt="policy"></div>
+            <div class="relative z-10 text-center">
+                <div id="policyVideo" class="lg:max-w-[854px] lg:mx-auto video-wrap" data-aos="fade-left"
+                    data-aos-offset="200" data-aos-delay="200">
+                    <div class="lg:hidden"><img src="./assets/images/policy.png" alt="policy"></div>
                     <div class="hidden lg:block"><img src="./assets/images/policy-pc.png" alt="policy"></div>
-                    <button class="btn-play" id="policyVideo"
-                        onclick="loadVideo2('WfdcLWjNwD8?si=xgS7wJY8aLlH2GeI', 'policyVideo')">
-                        <img src="./assets/images/play.svg" alt="play" />
-                    </button> -->
-
-                    <div class="lg:hidden"><img src="./assets/images/advantage.png" alt="policy"></div>
-                    <div class="hidden lg:block"><img src="./assets/images/advantage-pc.png" alt="policy"></div>
                     <button class="btn-play z-10" id="policyVideo"
                         onclick="loadVideo('WfdcLWjNwD8?si=xgS7wJY8aLlH2GeI', 'policyVideo')">
                         <img src="./assets/images/play.svg" alt="play" />
                     </button>
                     <div id="video-container-policyVideo" class="video-frame"></div>
-
-
-                    <!-- <div class="relative lg:w-[57%]">
-                        <div id="advantageVideo">
-                            <div class="lg:hidden"><img src="./assets/images/advantage.png" alt="advantage"></div>
-                            <div class="hidden lg:block"><img src="./assets/images/advantage-pc.png" alt="advantage"></div>
-                            <button class="btn-play z-10" id="advantageVideo"
-                                onclick="loadVideo('WfdcLWjNwD8?si=xgS7wJY8aLlH2GeI', 'advantageVideo')">
-                                <img src="./assets/images/play.svg" alt="play" />
-                            </button>
-                            <div id="video-container-advantageVideo" class="video-frame"></div>
-                        </div>
-                    </div> -->
-
                 </div>
+            </div>
+            <div class="flex justify-center div-cicle">
+                <a href="#register" class="btn-scroll a-scroll" data-aos="zoom-in" data-aos-offset="10"
+                    data-aos-delay="100">
+                    <img src="./assets/images/ic-down-double.svg" alt="">
+                </a>
             </div>
         </div>
         <img class="absolute w-[330px] h-[288px] -left-[81px] -bottom-[89px]" src="./assets/images/policy-watermark.png"
@@ -438,47 +535,78 @@
     <!-- END POLICY -->
 
     <!-- SUBMIT FORM -->
-    <section class="section__register">
+    <section class="section__register" id="register">
         <div class="container">
             <div class="bg-white px-6 py-10 mx-5 box-register lg:max-w-[522px] lg:ml-auto lg:mx-0">
-                <h2 class="title">ĐĂNG KÝ NHẬN TƯ VẤN</h2>
-                <p class="font-normal text-[#4D4D4D]">Lorem ipsum dolor sit amet consectetur. Diam sagittis enim proin
-                    cursus tellus. Suspendisse et at dolor.</p>
-                <form>
+                <h2 class="title">GIẢI ĐÁP THẮC MẮC CỦA ANH/CHỊ?</h2>
+                <p class="font-normal text-[#4D4D4D]"> <br>Sau khi anh/chị đã tìm hiểu dự án chi tiết qua những Video em
+                    trình bày ở trên thì anh/chị có câu hỏi nào dành cho em? <br>
+                    Anh chị vui lòng điền thông tin theo mẫu dưới đây để em hỗ trợ ạ!
+                    <br>
+                    (Website của em là 100% tự code, được mã hoá, không qua một bên trung gian làm WEB nào nên thông tin
+                    của anh/chị sẽ được bảo mật "Tuyệt Đối" nhé ạ!
+                </p>
+                <div>
                     <div class="mt-6">
                         <label class="block text-[#2E2E2E] text-base mb-[6px]" for="password">
-                            Họ tên
+                            Họ & tên anh/chị?
                         </label>
                         <input class="appearance-none border border-[#CCCCCC] rounded-lg w-full py-2 px-3 " id="name"
-                            type="text" placeholder="Họ tên">
+                            type="text" placeholder="Họ & tên anh/chị?">
+                        <p id="reqName" style="display: none;color: red;">Vui lòng nhập họ tên</p>
                     </div>
                     <div class="mt-6">
                         <label class="block text-[#2E2E2E] text-base mb-[6px]" for="password">
-                            Số điện thoại
+                            Số điện thoại anh/chị sử dụng Zalo để em gửi câu trả lời qua ạ?
                         </label>
                         <input class="appearance-none border border-[#CCCCCC] rounded-lg w-full py-2 px-3 " id="phone"
                             type="text" placeholder="Số điện thoại">
+                        <p id="reqPhone" style="display: none;color: red;">Vui lòng nhập số điện thoại</p>
                     </div>
                     <div class="mt-6">
                         <label class="block text-[#2E2E2E] text-base mb-[6px]" for="password">
-                            Email
+                            Những vấn đề anh/chị đang thắc mắc: (giá bán, chính sách bán hàng, hướng, tầng, tiện ích...)
                         </label>
                         <input class="appearance-none border border-[#CCCCCC] rounded-lg w-full py-2 px-3 " id="email"
-                            type="email" placeholder="Email">
+                            type="text" placeholder="Nội dung">
                     </div>
                     <div class="lg:flex lg:gap-[76px] lg:items-center">
-                        <button class="btn-register--orange mt-6 w-[100%] lg:max-w-[224px] justify-center"><svg
+                        <button onclick="sendEmail()"
+                            class="scale1 btn-register--orange mt-6 w-[100%] lg:max-w-[224px] justify-center items-center"><svg
                                 width="19" height="20" viewBox="0 0 19 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M0.405282 6.11725C0.302664 6.15137 0.212089 6.21442 0.144448 6.2988C0.0768062 6.38318 0.0349781 6.4853 0.0239932 6.59288C0.0130083 6.70047 0.0333341 6.80894 0.0825266 6.90524C0.131719 7.00155 0.207684 7.0816 0.301287 7.13576L5.95037 10.4065C6.04357 10.4604 6.15029 10.4863 6.25783 10.4812C6.36536 10.4762 6.46917 10.4403 6.55688 10.3779L12.9054 5.84257C13.1642 5.6584 13.4817 5.97594 13.2975 6.23474L8.76301 12.5824C8.70031 12.6701 8.66419 12.7741 8.65898 12.8817C8.65377 12.9894 8.67969 13.0964 8.73364 13.1897L12.0043 18.8388C12.0585 18.9324 12.1385 19.0084 12.2348 19.0576C12.3312 19.1068 12.4396 19.1271 12.5472 19.1161C12.6548 19.1051 12.7569 19.0633 12.8413 18.9956C12.9257 18.928 12.9887 18.8374 13.0228 18.7348L18.9768 0.873027C19.0096 0.774183 19.0143 0.668153 18.9903 0.566793C18.9664 0.465434 18.9146 0.372746 18.841 0.299095C18.7673 0.225446 18.6747 0.173738 18.5733 0.149759C18.4719 0.125782 18.3659 0.130476 18.2671 0.163319L0.405282 6.11725Z"
                                     fill="white" />
                             </svg>
-                            <span>ĐĂNG KÝ TƯ
-                                VẤN</span></button>
-                        <p class="hotline">HOTLINE: <b>0966976698</b></p>
+                            <span>GỬI ĐI</span>
+                        </button>
+                        <a href="tel:+84966976698">
+                            <p class="hotline">HOTLINE: <b>0966 976 698</b></p>
+                        </a>
                     </div>
-                </form>
+                </div>
+            </div>
+
+            <div class="w3-container" id="w3-divss">
+                <!-- <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open
+                    Animated Modal</button> -->
+
+                <div id="id01" class="w3-modal" style="background-color: initial;">
+                    <div class="w3-modal-content w3-animate-top w3-card-4" style="border-radius: 12px;">
+                        <header class="w3-container" id="headPop">
+                            <span onclick="document.getElementById('id01').style.display='none'"
+                                class="w3-button w3-display-topright">&times;</span>
+                            <h2>ZenPark</h2>
+                        </header>
+                        <div class="w3-container">
+                            <p>Cảm ơn anh chị đã gửi lời nhắn cho em!</p><br>
+                            <p>Em sẽ phản hồi ngay khi nhận được thông tin.</p>
+                            <p>Hoặc anh chị cũng có thể liên hệ với em qua số máy cầm tay của em:<i
+                                    style="color: blue;"> 0966976698</i></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -486,42 +614,125 @@
 
     <!-- FOOTER -->
     <footer class="gradient py-[19px] px-5 text-center flex items-center justify-center">
-        <img src="./assets/images/footer-logo.svg" alt="footer">
+        <img src="./assets/images/footer-logo.png" alt="footer" class="h-[52px] w-auto">
     </footer>
     <!-- END FOOTER -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Initialize EmailJS with your user ID
+        emailjs.init("UOUqSGglVpUjzihrE");
+        // Function to send email
+        function sendEmail() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('email').value;
+
+            const reqPhone = document.getElementById('reqPhone');
+            const reqName = document.getElementById('reqName');
+
+            if (name.trim() === "" && phone.trim() === "") {
+                reqName.style.display = "block";
+                reqPhone.style.display = "block";
+            }
+            else if (name.trim() === "") {
+                reqName.style.display = "block";
+                reqPhone.style.display = "none";
+            }
+            else if (phone.trim() === "") {
+                reqName.style.display = "none";
+                reqPhone.style.display = "block";
+            }
+            else {
+                        var divToChange = document.getElementById('id01');
+                        var headPop = document.getElementById('headPop');
+                        var w3Div = document.getElementById('w3-divss');
+                        // Toggle the 'clicked' class on click
+                        divToChange.style.display = 'block';
+                        headPop.style.backgroundColor = 'rgb(228 99 41)';
+                        headPop.height = '50px';
+                        divToChange.style.marginTop = "10%";
+                        divToChange.style.backgroundColor = "background-color: initial";
+
+                        document.getElementById('name').value = "";
+                        document.getElementById('phone').value = "";
+                        document.getElementById('email').value = "";
+                // reqName.style.display = "none";
+                // reqPhone.style.display = "none";
+                // emailjs.send("service_cy4qagp", "template_cs8nfwy", {
+                //     to_email: "tzenpark@gmail.com", // Replace with recipient's email
+
+                //     // content
+                //     fullName: name,
+                //     phone: phone,
+                //     message: message
+                // })
+                //     .then(function (response) {
+                //         console.log("Email sent:", response);
+                //         var divToChange = document.getElementById('id01');
+                //         var headPop = document.getElementById('headPop');
+                //         var w3Div = document.getElementById('w3-divss');
+                //         // Toggle the 'clicked' class on click
+                //         divToChange.style.display = 'block';
+                //         headPop.style.backgroundColor = 'rgb(228 99 41)';
+                //         headPop.height = '50px';
+                //         divToChange.style.marginTop = "10%";
+                //         divToChange.style.backgroundColor = "background-color: initial";
+
+                //         document.getElementById('name').value = "";
+                //         document.getElementById('phone').value = "";
+                //         document.getElementById('email').value = "";
+                //     }, function (error) {
+                //         console.error("Error sending email:", error);
+                //     });
+            }
+        }
+    </script>
     <script>
-        // function loadVideo2(videoId, containerId) {
-        //     // Hide thumbnail
-        //     // document.getElementById(containerId).style.display = 'none';
+        AOS.init({
+            once: true
+        });
 
-        //     // Create and append iframe
+        let currentVideo;
+        function loadVideo(videoId, containerId) {
+            // Hide thumbnail
+            // document.getElementById(containerId).style.display = 'none';
 
-        //     const video = document.createElement('video');
-        //     video.style.width = '100%'; // Set width to 100%
-        //     video.style.height = '100%'; 
-        //     video.autoplay = true;
-        //     video.controls = true; // Show controls (play, pause, etc.)
-        //     video.src = "./assets/video/test.mp4";
+            // Create and append iframe
+            if (currentVideo) {
+                currentVideo.pause();
+            }
+            const video = document.createElement('video');
+            video.style.width = '100%'; // Set width to 100%
+            video.style.height = '100%';
+            video.autoplay = true;
+            video.controls = true; // Show controls (play, pause, etc.)
+            video.src = "./assets/video/test.mp4";
 
+            const another = document.querySelectorAll('.video-frame')
+            for (let i = 0; i < another.length; i++) {
+                another[i].innerHTML = null;
+                another[i].style.zIndex = 0;
+                const imgList = another[i].parentElement.getElementsByTagName('img')
+                console.log(imgList);
+                for (let i = 0; i < imgList.length; i++) {
+                    imgList[i].style.opacity = '1';
+                }
+            }
 
-        //     // const iframe = document.createElement('iframe');
-        //     // iframe.width = '100%';
-        //     // iframe.height = '100%';
-        //     // iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-        //     // iframe.frameborder = '0';
-        //     // iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
-        //     // iframe.allowfullscreen = true;
-        //     const elVideo = 'video-container-' + containerId;
-        //     const parentDiv = document.getElementById(containerId);
-        //     const childImages = parentDiv.getElementsByTagName('img');
+            setTimeout(() => {
+                const elVideo = 'video-container-' + containerId;
+                const parentDiv = document.getElementById(containerId);
+                const childImages = parentDiv.getElementsByTagName('img');
 
-        //     for (let i = 0; i < childImages.length; i++) {
-        //         childImages[i].style.opacity = '0';
-        //     }
+                for (let i = 0; i < childImages.length; i++) {
+                    childImages[i].style.opacity = '0';
+                }
 
-        //     document.getElementById(elVideo).style.zIndex=20;
-        //     document.getElementById(elVideo).appendChild(video);
-        // }
+                document.getElementById(elVideo).style.zIndex = 20;
+                document.getElementById(elVideo).appendChild(video);
+            }, 100)
+        }
     </script>
 </body>
+
 </html>
